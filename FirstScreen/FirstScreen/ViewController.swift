@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let time = DispatchTime.now() + .seconds(2)
         DispatchQueue.main.asyncAfter(deadline: time, execute: self.moveToMain)
     }
