@@ -37,8 +37,8 @@ class ViewController: UIViewController {
         backgroundColorBtn.addTarget(self, action: #selector(backgroundColorAnimate), for: .touchUpInside)
     }
     
-    func animateEnd(){
-        print("yyyy-MM-dd HH:mm:ss".stringFromDate() + "에 애니메이션 종료")
+    func animateEnd(_ msg: String){
+        print("yyyy-MM-dd HH:mm:ss".stringFromDate() + "에 애니메이션 종료 : \(msg)")
     }
 
 
@@ -64,7 +64,16 @@ extension ViewController{
                            options: [.curveEaseIn],
                            animations: {
                             self.logo.bounds = .init(x: -100, y: -100, width: 100, height: 100)
-            })
+                            },
+                           completion: { result in
+                            switch result {
+                            case true:
+                                self.animateEnd("성공")
+                            case false:
+                                self.animateEnd("실패")
+                            }
+                           }
+            )
 
         }
         
