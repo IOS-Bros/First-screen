@@ -1,4 +1,7 @@
 # First-screen
+
+https://developer.apple.com/documentation/uikit/uiviewanimating
+
 ## animate 의 매개변수(속성 정리)
 - withDuration   
   입력한 시간(단위 : 초)동안 에니메이션이 진행
